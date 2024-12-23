@@ -1,4 +1,5 @@
 import { Card, Carousel, Container, Row, Col } from "react-bootstrap";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
@@ -14,6 +15,7 @@ const projects = [
     description:
       "Built a predictive model for Airbnb pricing in NYC using linear regression and random forest techniques. The model analyzes historical data to forecast pricing trends, helping property owners optimize pricing strategies. Achieved an impressive accuracy rate of 95%, boosting revenue potential for Airbnb hosts in the region.",
     techStack: ["Python", "Scikit-Learn", "Pandas", "NumPy"],
+    link: process.env.PUBLIC_URL +"/Assets/Project_.html",
   },
 ];
 
@@ -65,17 +67,27 @@ export default function Projects() {
                   style={{
                     width: "90%",
                     maxWidth: "350px",
-                    minHeight: "400px", // Ensures consistent card height
+                    minHeight: "400px",
                     boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.5)",
                     border: "1px solid white",
                   }}
                 >
                   <Card.Body>
                     <Card.Header
-                      className="text-white fw-bold fs-5 border-bottom"
+                      className="text-white fw-bold fs-5 border-bottom d-flex align-items-center justify-content-between"
                       style={{ borderColor: "white" }}
                     >
                       {project.title}
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-info ms-2"
+                        >
+                          <FaExternalLinkAlt />
+                        </a>
+                      )}
                     </Card.Header>
                     <Card.Text className="text-secondary mt-3">
                       {project.description}
@@ -106,10 +118,20 @@ export default function Projects() {
                 >
                   <Card.Body>
                     <Card.Header
-                      className="text-white fw-bold fs-5 border-bottom"
+                      className="text-white fw-bold fs-5 border-bottom d-flex align-items-center justify-content-between"
                       style={{ borderColor: "white" }}
                     >
                       {project.title}
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-info ms-2"
+                        >
+                          <FaExternalLinkAlt />
+                        </a>
+                      )}
                     </Card.Header>
                     <Card.Text className="text-secondary mt-3">
                       {project.description}
