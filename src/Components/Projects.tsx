@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Food Volunteer Web Application",
     description:
-      "The application facilitates the management of food donations, helping volunteers track and distribute food to those in need. It includes features like user authentication, food tracking, and real-time updates to enhance coordination and ensure the efficient delivery of food to local communities.",
+      "The application facilitates the management of food donations, helping volunteers track and distribute food to those in need. It includes features like user authentication, food tracking, email service and real-time updates to enhance coordination and ensure the efficient delivery of food to local communities.",
     techStack: ["Java", "SpringBoot", "MySQL", "JSP"],
   },
   {
