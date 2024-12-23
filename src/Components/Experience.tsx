@@ -53,7 +53,7 @@ export default function Experience() {
             zIndex: 2
           }}
         >
-          <Card.Header className="text-white ">Experience</Card.Header>
+          <Card.Header className="text-white fs-4">Experience</Card.Header>
         </Card>
       </div>
 

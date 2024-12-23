@@ -5,7 +5,7 @@ import ubLogo from "./ub.png";
 const educationData = [
   {
     degree: "Master’s Degree",
-    duration: "2023 - 2024 December",
+    duration: "2023 - 2024",
     field: "Computer and Information Science",
     university: "University at Buffalo",
     description: "",
@@ -17,7 +17,7 @@ const educationData = [
     field: "B.E Civil Engineering",
     university: "SSN College of Engineering",
     description: "",
-    logo: process.env.PUBLIC_URL +"/Assets/ssn.jpg",
+    logo: process.env.PUBLIC_URL + "/Assets/ssn.jpg",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Education() {
       </div>
 
       <Container fluid id="education-section" className="py-4">
-
+        {/* Mobile Carousel */}
         <div className="d-block d-md-none">
           <Carousel>
             {educationData.map((data, index) => (
@@ -68,9 +68,10 @@ export default function Education() {
                     boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.5)",
                     border: "1px solid white",
                     overflow: "hidden",
+                    height: "400px", // Fixed height for all cards
                   }}
                 >
-                  <Card.Body>
+                  <Card.Body className="d-flex flex-column justify-content-between">
                     <Card.Header className="text-white d-flex justify-content-between align-items-center border-bottom">
                       <div className="d-flex align-items-center">
                         <div
@@ -95,7 +96,10 @@ export default function Education() {
                             src={data.logo}
                             alt={data.degree}
                             className="img-fluid rounded"
-                            style={{ objectFit: "cover", maxHeight: "180px" }}
+                            style={{
+                              objectFit: "cover",
+                              maxHeight: "150px", // Consistent image height
+                            }}
                           />
                         </Col>
                         <Col xs={12} sm={7} className="text-start">
@@ -126,7 +130,7 @@ export default function Education() {
           </Carousel>
         </div>
 
-
+        {/* Desktop View */}
         <div className="d-none d-md-block">
           <Row className="justify-content-center gx-4 gy-5">
             {educationData.map((data, index) => (
@@ -165,14 +169,14 @@ export default function Education() {
                             src={data.logo}
                             alt={data.degree}
                             className="img-fluid rounded"
-                            style={{ objectFit: "cover", maxHeight: "180px" }}
+                            style={{ objectFit: "cover", maxHeight: "150px" }}
                           />
                         </Col>
                         <Col xs={12} sm={7} className="text-start">
-                          <h4 style={{ color: "white", fontWeight: "bold" }}>
+                          <h4 style={{ color: "white" }}>
                             {data.duration}
                           </h4>
-                          <h3 style={{ color: "white", fontWeight: "bold" }}>
+                          <h3 style={{ color: "white" }}>
                             {data.degree}
                           </h3>
                           <p style={{ color: "#C0C0C0", fontWeight: "bold" }}>
