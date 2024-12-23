@@ -47,8 +47,8 @@ export default function Skills() {
     if (Ispaused) return;
     if (scrollContainer) {
       const scrollContentWidth = scrollContainer.scrollWidth;
-      const scrollStep = 1; 
-      const interval = 16; 
+      const scrollStep = 3; 
+      const interval = 10; 
 
       const children = Array.from(scrollContainer.children);
       children.forEach((child) => {
